@@ -10,19 +10,38 @@
             overflow: hidden;
         }
 
-        video {
+        #video-container {
             width: 100%;
             height: auto;
-            display: block;
+            overflow: hidden;
+        }
+
+        #visible-area {
+            width: 184px; /* Width of the visible portion */
+            height: 88px; /* Height of the visible portion */
+            position: relative;
+            margin: 0 auto; /* Center the visible area horizontally */
+            overflow: hidden;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Cover the visible area while maintaining aspect ratio */
+            object-position: center; /* Center the video within the visible area */
         }
     </style>
 </head>
 <body>
 
-<video autoplay muted>
-    <source src="center_1.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+<div id="video-container">
+    <div id="visible-area">
+        <video autoplay muted>
+            <source src="1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
 
 </body>
 </html>
