@@ -11,36 +11,27 @@
         }
 
         #video-container {
-            width: 100%;
-            height: auto;
-            overflow: hidden;
-        }
-
-        #visible-area {
             width: 80px; /* Width of the visible portion */
             height: 88px; /* Height of the visible portion */
-            position: relative;
-            margin: 0 auto; /* Center the visible area horizontally */
             overflow: hidden;
+            position: relative;
         }
 
         video {
-            width: auto;
-            height: 100%; /* Fill the entire height of the visible area */
+            width: 100%;
+            height: 100%;
             object-fit: cover; /* Cover the visible area while maintaining aspect ratio */
-            object-position: right; /* Align the right edge of the video to the right edge of the visible area */
+            object-position: 100% 0; /* Align the right edge of the video to the right edge of the visible area */
         }
     </style>
 </head>
 <body>
 
 <div id="video-container">
-    <div id="visible-area">
-        <video autoplay muted>
-            <source src="2.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
+    <video autoplay muted width="80" height="88">
+        <source src="2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 </div>
 
 </body>
