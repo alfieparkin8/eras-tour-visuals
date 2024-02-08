@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Left 2</title>
     <style>
         body {
@@ -11,24 +11,26 @@
         }
 
         #video-container {
-            width: 100%;
-            height: auto;
+            width: 80px; /* Width of the visible portion */
+            height: 88px; /* Height of the visible portion */
+            position: relative;
             overflow: hidden;
         }
 
         #visible-area {
-            width: 80px; /* Width of the visible portion */
-            height: 88px; /* Height of the visible portion */
-            position: relative;
-            margin: 0 auto; /* Center the visible area horizontally */
+            width: 100%; /* Full width of the video container */
+            height: 100%; /* Full height of the video container */
+            position: absolute;
+            left: 0; /* Align the visible area to the left */
+            top: 0; /* Align the visible area to the top */
             overflow: hidden;
         }
 
         video {
-            width: 100%;
-            height: 100%;
+            width: auto;
+            height: 100%; /* Fill the entire height of the visible area */
             object-fit: cover; /* Cover the visible area while maintaining aspect ratio */
-            object-position: left; /* Align the video to the left within the visible area */
+            object-position: 0 0; /* Align the left-top corner of the video to the left-top corner of the visible area */
         }
     </style>
 </head>

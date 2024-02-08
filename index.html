@@ -3,26 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Center 1</title>
+    <title>Three Iframes</title>
     <style>
         body {
             margin: 0;
+            padding: 0;
+        }
+
+        .iframe-container {
+            display: inline-block;
+            height: 88px; /* Height of each iframe */
+            margin: 0;
+            padding: 0;
+            border: none; /* Remove borders */
             overflow: hidden;
         }
 
-        video {
-            width: 100%;
-            height: auto;
-            display: block;
+        #left-frame,
+        #right-frame {
+            width: 80px; /* Width of the side iframes */
+        }
+
+        #center-frame {
+            width: 184px; /* Width of the center iframe */
         }
     </style>
 </head>
 <body>
 
-<video autoplay muted>
-    <source src="center_1.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+<div class="iframe-container" id="left-frame">
+    <iframe src="https://alfieparkin8.github.io/eras-tour-visuals/left_2" frameborder="0"></iframe>
+</div>
+
+<div class="iframe-container" id="center-frame">
+    <iframe src="https://alfieparkin8.github.io/eras-tour-visuals/center_2" frameborder="0"></iframe>
+</div>
+
+<div class="iframe-container" id="right-frame">
+    <iframe src="https://alfieparkin8.github.io/eras-tour-visuals/right_2" frameborder="0"></iframe>
+</div>
 
 </body>
 </html>
