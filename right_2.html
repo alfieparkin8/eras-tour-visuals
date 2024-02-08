@@ -18,8 +18,11 @@
         }
 
         video {
-            width: 100%;
-            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 344px; /* Width of the original video */
+            height: 88px; /* Height of the original video */
             object-fit: cover; /* Cover the visible area while maintaining aspect ratio */
             object-position: 100% 0; /* Align the right edge of the video to the right edge of the visible area */
         }
@@ -28,7 +31,7 @@
 <body>
 
 <div id="video-container">
-    <video autoplay muted width="80" height="88">
+    <video autoplay muted>
         <source src="2.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
